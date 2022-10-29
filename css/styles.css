@@ -16,10 +16,14 @@ h6,
 p {
   margin: 0;
 }
+ul {
+  margin: 0;
+}
 
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -39,6 +43,13 @@ body {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
 }
 
 :root {
@@ -98,6 +109,7 @@ body {
   margin-left: auto;
   margin-bottom: 0;
   margin-top: 0;
+  padding-left: 0;
 }
 .contacts-email {
   font-weight: 500;
@@ -127,13 +139,15 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+.header {
+  border-bottom-color: rgb(236, 236, 236);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
 
 .header-container {
   display: flex;
   align-items: center;
-  border-bottom-color: rgb(236, 236, 236);
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
 }
 .site-nav {
   display: flex;
@@ -141,22 +155,19 @@ body {
   margin-left: 93px;
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 0;
 }
 
 /* Hero */
 .hero {
-  width: 1600px;
-  height: 600px;
   background-color: var(--footer-bg-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 200px 0;
+  text-align: center;
 }
 
 .main-title {
   width: 696px;
-  font-family: 'Roboto';
+  margin: 0 auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -164,10 +175,14 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-background-color);
+
+  
 }
 .primary-button {
-  margin-top: 30px;
+  display: block;
   padding: 10px 32px 10px 32px;
+  margin: 0 auto;
+  margin-top: 30px;
 
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -179,6 +194,7 @@ body {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  border: none;
 }
 .primary-button:hover,
 .primary-button:focus {
@@ -212,6 +228,7 @@ body {
   text-transform: uppercase;
   color: var(--primary-title-color);
   font-size: 14px;
+  margin-bottom: 10px;
 }
 .benefits-paragraph {
   line-height: 1.71;
@@ -250,6 +267,10 @@ body {
   list-style: none;
 }
 
+.member-info {
+  padding: 30px 0;
+}
+
 .member-container {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -265,7 +286,6 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
-  padding-top: 30px;
   margin-bottom: 10px;
 }
 .our-team-paragraph {
@@ -275,7 +295,6 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--paragraph-color);
-  padding-bottom: 30px;
 }
 
 /* Footer  */
@@ -288,8 +307,11 @@ body {
   list-style: none;
   font-style: normal;
   padding-left: 0;
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 0;
+}
+.address-bar {
+  margin-top: 20px;
 }
 .footer-phone-mail {
   font-family: 'Roboto';
@@ -311,7 +333,7 @@ body {
   color: var(--primary-background-color);
   text-decoration: none;
 }
-.footer-link {
+.footer-link:not(:first-child) {
   margin-top: 9px;
 }
 .main-address:hover,
@@ -324,6 +346,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 8px;
+  padding-left: 0;
 }
 .filter-button {
   font-family: 'Roboto';
@@ -354,7 +377,7 @@ body {
   flex-wrap: wrap;
   gap: var(--indent);
   padding-left: 0;
-  margin-top: 34px;
+  margin-top: 50px;
   margin-bottom: 0;
 }
 .photo-item {
